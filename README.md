@@ -1,20 +1,3 @@
-# Event-Driven-Arch
-
-pip install pika
-
-
-https://www.erlang.org/downloads
-
-https://www.rabbitmq.com/docs/install-windows#installer
-
-Start RabbitMQ Service
-
-python producer_order.py
-
-python consumer_payment.py
-
-python consumer_notification.py
-
 # Event-Driven Architecture with RabbitMQ
 
 This project demonstrates an event-driven architecture using RabbitMQ as a message broker. It consists of a producer (`producer_order.py`) that sends messages to RabbitMQ, and two consumers (`consumer_payment.py` and `consumer_notification.py`) that process the messages asynchronously.
