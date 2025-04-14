@@ -12,19 +12,19 @@ def generate_random_order():
     return {
         "order_id": order_id,
         "user_id": user_id,
-        "book_id": book_id
+        "book_id": book_id,
+        "student_name":"Shreya Barki"
     }
 
 def place_order():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST))
     channel = connection.channel()
 
-    channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type='direct')
-
+    channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type='topic')
     order = generate_random_order()
 
     channel.basic_publish(exchange=EXCHANGE_NAME, routing_key="order-created", body=json.dumps(order))
-    print(f"Order placed: {order}")
+    print(f"[Shreya Barki]Producer: Order placed: {order}")
 
     connection.close()
 

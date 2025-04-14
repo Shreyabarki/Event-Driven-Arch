@@ -1,5 +1,5 @@
-RABBITMQ_HOST = "localhost"  
-EXCHANGE_NAME = "broker_exchange"  
+RABBITMQ_HOST = "localhost"
+EXCHANGE_NAME = "broker_exchange"
 ORDER_QUEUE = "order_queue"
 PAYMENT_QUEUE = "payment_queue"
 INVENTORY_QUEUE = "inventory_queue"
